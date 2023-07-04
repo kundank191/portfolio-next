@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [],
-  theme: {
-    extend: {},
+
+import { fontFamily } from 'tailwindcss/defaultTheme'
+
+export const content = ["./src/**/*.{html,js}"]
+export const theme = {
+  extend: {
+    fontFamily: {
+      mont: ['var(--font-mont)', ...fontFamily.sans]
+    }
   },
-  plugins: [],
 }
+export const plugins = []
 
